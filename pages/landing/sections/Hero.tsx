@@ -75,10 +75,10 @@ export default function Hero() {
                         <div className='flex flex-col gap-1 bg-surface-light rounded-xl border border-[#E8E1D3] p-3.5'>
                             <h3 className='text-gray-subtle text-xs md:text-sm'>Daily Net Sales</h3>
                             <h4 className='text-lg md:text-[20px] font-bold text-dark'>AED 42,850</h4>
-                            <span className='flex items-center gap-1 text-[11px] font-bold text-[#059669]'>
+                            <span className='flex items-center gap-1 text-[11px] font-bold text-[#047857]'>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 3.5H11V6.5" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M11 3.5L6.75 7.75L4.25 5.25L1 8.5" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M8 3.5H11V6.5" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M11 3.5L6.75 7.75L4.25 5.25L1 8.5" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 +18.4% vs last Thu
                             </span>
@@ -86,12 +86,12 @@ export default function Hero() {
                         <div className='flex flex-col gap-1 bg-surface-light rounded-xl border border-[#E8E1D3] p-3.5'>
                             <h3 className='text-gray-subtle text-xs md:text-sm'>Active Covers</h3>
                             <h4 className='text-lg md:text-[20px] font-bold text-dark'>168 Guests</h4>
-                            <span className='flex items-center gap-1 text-[11px] font-bold text-[#059669]'>
+                            <span className='flex items-center gap-1 text-[11px] font-bold text-[#047857]'>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M8 10.5V9.5C8 8.39617 7.10383 7.5 6 7.5H3C1.89617 7.5 1 8.39617 1 9.5V10.5" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M8 1.564C8.88211 1.79268 9.4981 2.58873 9.4981 3.5C9.4981 4.41126 8.88211 5.20732 8 5.436" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M11 10.5V9.5C10.9993 8.58856 10.3825 7.79286 9.5 7.565" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M2.5 3.5C2.5 4.21453 2.8812 4.87479 3.5 5.23205C4.1188 5.58932 4.8812 5.58932 5.5 5.23205C6.1188 4.87479 6.5 4.21453 6.5 3.5C6.5 2.39617 5.60383 1.5 4.5 1.5C3.39617 1.5 2.5 2.39617 2.5 3.5H2.5" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M8 10.5V9.5C8 8.39617 7.10383 7.5 6 7.5H3C1.89617 7.5 1 8.39617 1 9.5V10.5" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M8 1.564C8.88211 1.79268 9.4981 2.58873 9.4981 3.5C9.4981 4.41126 8.88211 5.20732 8 5.436" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M11 10.5V9.5C10.9993 8.58856 10.3825 7.79286 9.5 7.565" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M2.5 3.5C2.5 4.21453 2.8812 4.87479 3.5 5.23205C4.1188 5.58932 4.8812 5.58932 5.5 5.23205C6.1188 4.87479 6.5 4.21453 6.5 3.5C6.5 2.39617 5.60383 1.5 4.5 1.5C3.39617 1.5 2.5 2.39617 2.5 3.5H2.5" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 28 Tables Seated
                             </span>
@@ -117,10 +117,10 @@ export default function Hero() {
                         <div className='flex flex-col gap-1 bg-surface-light rounded-xl border border-[#E8E1D3] p-3.5'>
                             <h3 className='text-gray-subtle text-xs md:text-sm'>Avg Order Value</h3>
                             <h4 className='text-lg md:text-[20px] font-bold text-dark'>AED 255.00</h4>
-                            <span className='flex items-center gap-1 text-[11px] font-bold text-[#059669]'>
+                            <span className='flex items-center gap-1 text-[11px] font-bold text-[#047857]'>
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3.5 3.5H8.5V8.5" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
-                                    <path d="M3.5 8.5L8.5 3.5" stroke="#059669" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M3.5 3.5H8.5V8.5" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M3.5 8.5L8.5 3.5" stroke="#047857" strokeLinecap="round" strokeLinejoin="round"/>
                                 </svg>
                                 +12% dessert attach
                             </span>

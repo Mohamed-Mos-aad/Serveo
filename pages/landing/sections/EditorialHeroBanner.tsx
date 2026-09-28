@@ -32,7 +32,7 @@ export default function EditorialHeroBanner() {
                             <span className="text-[12px] text-gray-muted">Daily Manager Admin Saved</span>
                         </div>
                         <div className="bg-white/80 border border-[#E8E1D3] rounded-xl px-4 py-2.5 text-center">
-                            <h2 className="text-[24px] font-bold text-[#059669]">99.98%</h2>
+                            <h2 className="text-[24px] font-bold text-[#047857]">99.98%</h2>
                             <span className="text-[12px] text-gray-muted">Offline Cloud Redundancy</span>
                         </div>
                     </div>

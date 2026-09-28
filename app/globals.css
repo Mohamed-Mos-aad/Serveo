@@ -11,8 +11,8 @@
   --font-sans: var(--font-dm-sans), sans-serif;
 
 
-  --color-primary: #D94A1F;
-  --color-primary-hover: #C23D15;
+  --color-primary: #C23D15;
+  --color-primary-hover: #B93815;
   --color-primary-light: #E47C56;
   --color-primary-pale: #EEAF95;
 
@@ -29,7 +29,7 @@
 
   
   --color-border-light: #E7E5E4;
-  --color-gray-subtle: #857F77;
+  --color-gray-subtle: #6B655E;
   --color-gray-muted: #615C56;
 }
 

@@ -46,7 +46,7 @@ export default function DemoFooter() {
         className="bg-surface px-4 py-16 sm:px-8 sm:py-20"
       >
         <div className="mx-auto max-w-5xl rounded-[28px] border border-[#e8e1d3] bg-white px-6 py-12 text-center shadow-sm sm:px-12 sm:py-16">
-          <span className="rounded-full bg-[#fff0e8] px-4 py-2 text-[10px] font-semibold text-primary">
+          <span className="rounded-full bg-surface-tint px-4 py-2 text-[10px] font-semibold text-primary">
             Setup & Training in under 48 hours
           </span>
           <h2 className="mx-auto mt-6 max-w-xl text-4xl leading-tight text-dark sm:text-5xl">
@@ -62,7 +62,7 @@ export default function DemoFooter() {
               type="email"
               required
               placeholder="Enter your work email (e.g. chef@restaurant.ae)"
-              className="min-w-0 flex-1 rounded-xl border border-[#e8e1d3] bg-[#faf7f2] px-4 py-3 text-xs outline-none focus:border-primary"
+              className="min-w-0 flex-1 rounded-xl border border-[#e8e1d3] bg-surface-light px-4 py-3 text-xs outline-none focus:border-primary"
             />
             <button className="rounded-xl bg-primary px-6 py-3 text-xs font-bold text-white hover:bg-primary-hover">
               Book a Demo

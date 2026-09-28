@@ -97,11 +97,11 @@ export default function OperationsPreview() {
                     />
                   ))}
                 </div>
-                <div className="mt-2 flex justify-between text-[8px] text-white/40">
+                <div className="mt-2 flex justify-between text-[8px] text-white/60">
                   <span>17:00</span>
                   <span>18:00</span>
                   <span>19:00</span>
-                  <span className="text-primary">20:00 (Peak)</span>
+                  <span className="text-primary-pale">20:00 (Peak)</span>
                   <span>21:00</span>
                   <span>22:00</span>
                   <span>23:00</span>
