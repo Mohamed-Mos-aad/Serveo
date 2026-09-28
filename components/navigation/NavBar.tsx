@@ -35,6 +35,8 @@ export default function NavBar() {
 
                 <button 
                     onClick={() => setIsOpen(!isOpen)} 
+                    aria-label="Toggle navigation menu"
+                    aria-expanded={isOpen}
                     className='lg:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 cursor-pointer focus:outline-none'
                 >
                     <span className={`w-6 h-0.5 bg-charcoal transition-transform duration-300 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
