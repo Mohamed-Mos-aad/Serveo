@@ -43,8 +43,6 @@ export default function Hero() {
                     Explore Live Platform
                 </Button>
             </div>
-            
-            {/* Hero Image Container */}
             <div className='w-full max-w-5xl relative mt-8 flex flex-col gap-4'>
                 <div className='border border-primary/15 p-1.5 rounded-3xl relative overflow-hidden'>
                     <Image src={heroImage} alt='Busy warm high-end restaurant dining room in Dubai' className='w-full h-auto rounded-3xl object-cover'/>
@@ -67,12 +65,10 @@ export default function Hero() {
                         </div>
                     </div>
                 </div>
-
-                {/* Dashboard Stats Card: Relative on mobile, Absolute on Desktop */}
                 <div className='w-full md:w-5/6 flex flex-col gap-4.5 bg-white p-4 md:p-6 rounded-2xl relative md:absolute md:left-1/2 md:-translate-x-1/2 md:top-full md:-translate-y-1/2 z-30 shadow-xl mx-auto'>
                     <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2'>
                         <h2 className='text-[10px] md:text-[12px] font-bold text-muted text-start'>SERVEO PULSE GCC — DUBAI MARINA <span className='bg-surface px-2 py-0.5 text-[10px] md:text-[11px] text-gray-muted ml-0 sm:ml-3 inline-block mt-1 sm:mt-0'>AED Currency Mode</span></h2>
-                        <h3 className='text-xs md:text-sm text-muted'>Sync: Just now</h3>
+                        <h3 className='text-xs md:text-sm text-gray-subtle'>Sync: Just now</h3>
                     </div>
                     <span className='flex w-full border-b border-[#E8E1D3]'></span>
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-start'>
