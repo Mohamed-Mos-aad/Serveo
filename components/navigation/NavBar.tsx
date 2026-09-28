@@ -4,6 +4,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 // ** Assets
 import logo from '@/public/logo.svg'
+// ** Components
+import Button from '../ui/Button';
 
 
 
@@ -27,8 +29,8 @@ export default function NavBar() {
                 </ul>
 
                 <div className='hidden lg:flex gap-4'>
-                    <button className='bg-transparent px-5 py-2.5 rounded-xl text-charcoal cursor-pointer'>Sign In</button>
-                    <button className='bg-primary px-5 py-2.5 rounded-xl text-white cursor-pointer'>Book a Demo</button>
+                    <Button variant='secondary'>Sign In</Button>
+                    <Button variant='primary'>Book a Demo</Button>
                 </div>
 
                 <button 
