@@ -62,7 +62,7 @@ export default function Trusted() {
     return (
         <section className='flex flex-col items-center gap-8 bg-white/40 border-y border-[#E8E1D3] py-12 overflow-hidden'>
             <h1 className="text-[12px] text-gray-subtle text-center px-4">TRUSTED BY OVER 450+ PREMIER RESTAURANTS AND CULINARY GROUPS ACROSS DUBAI, ABU DHABI & RIYADH</h1>
-            <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+            <div className="w-full inline-flex flex-nowrap overflow-hidden mask-[linear-gradient(to_right,transparent_0,black_128px,black_calc(100%-128px),transparent_100%)]">
                 <ul className="flex items-center gap-12 animate-infinite-scroll whitespace-nowrap">
                     {duplicatedItems.map((item, index) => (
                         <li key={index} className="flex items-center gap-2 text-[18px] text-charcoal shrink-0">
