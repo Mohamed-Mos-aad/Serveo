@@ -57,7 +57,7 @@ export default function CorePillars() {
     return (
         <section className="flex flex-col gap-16 px-4 sm:px-8 py-20 sm:py-28">
             <div className="text-center">
-                <span className="text-[12px] text-primary">BUILT FROM THE PASS UP</span>
+                <span className="text-[14px] font-bold text-primary">BUILT FROM THE PASS UP</span>
                 <h1 className="text-[28px] sm:text-[36px] text-dark my-2.5">
                     Everything your team touches,
                     engineered without friction.
