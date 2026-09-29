@@ -14,7 +14,7 @@ import RestaurantSolutions from "@/pages/landing/sections/RestaurantSolutions";
 
 
 
-export default function Home() {
+export default function Landing() {
   return (
     <main>
       <NavBar />
