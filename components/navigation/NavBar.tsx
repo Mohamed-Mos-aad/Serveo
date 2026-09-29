@@ -2,6 +2,7 @@
 // ** Hooks && Tools
 import Image from 'next/image';
 import { useState } from 'react';
+import Link from "next/link";
 // ** Assets
 import logo from '@/public/logo.svg'
 // ** Components
@@ -29,7 +30,11 @@ export default function NavBar() {
                 </ul>
 
                 <div className='hidden lg:flex gap-4'>
-                    <Button variant='secondary'>Sign In</Button>
+                    <Link href="/u">
+                        <Button variant='secondary'>
+                            Sign In
+                        </Button>
+                    </Link>
                     <Button variant='primary'>Book a Demo</Button>
                 </div>
 

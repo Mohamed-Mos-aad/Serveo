@@ -19,7 +19,7 @@ export default function Button({ children, variant = 'secondary', className = ''
 
     return (
         <button 
-            className={`${variantStyles} px-5 py-2.5 rounded-xl cursor-pointer flex items-center justify-center gap-2.5 ${className}`} 
+            className={`${variantStyles} px-5 py-2.5 rounded-xl cursor-pointer flex items-center justify-center gap-2.5 ${className} `}
             {...props}
         >
             {children}

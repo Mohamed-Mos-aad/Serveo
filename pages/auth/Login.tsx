@@ -1,7 +1,7 @@
 // ** Components
 import Badge from "@/components/ui/Badge"
 import Button from "@/components/ui/Button"
-// ** Porps
+// ** Props
 interface LoginProps{
     toggleHandler: ()=> void
 }
@@ -10,17 +10,126 @@ interface LoginProps{
 
 export default function Login({toggleHandler} : LoginProps) {
     return (
-        <section className="h-screen p-8">
-            <div className="h-full flex flex-col items-start gap-3 lg:bg-white rounded-4xl p-8">
+        <section className="min-h-screen flex items-center p-4 sm:p-6 lg:p-8">
+            <div className="w-full min-h-fit flex flex-col items-start gap-3 lg:bg-white rounded-4xl p-4 sm:p-6 lg:p-8">
                 <Badge>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.6663 7.58331C11.6663 10.5 9.62467 11.9583 7.19801 12.8041C7.07094 12.8472 6.9329 12.8451 6.80717 12.7983C4.37467 11.9583 2.33301 10.5 2.33301 7.58331V3.49998C2.33301 3.17803 2.59439 2.91664 2.91634 2.91664C4.08301 2.91664 5.54134 2.21664 6.55634 1.32998C6.81165 1.11185 7.1877 1.11185 7.44301 1.32998C8.46384 2.22248 9.91634 2.91664 11.083 2.91664C11.4052 2.91664 11.6663 3.17781 11.6663 3.49998V7.58331" stroke="#D94A1F" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M5.25 6.99998L6.41667 8.16665L8.75 5.83331" stroke="#D94A1F" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M11.6663 7.58331C11.6663 10.5 9.62467 11.9583 7.19801 12.8041C7.07094 12.8472 6.9329 12.8451 6.80717 12.7983C4.37467 11.9583 2.33301 10.5 2.33301 7.58331V3.49998C2.33301 3.17803 2.59439 2.91664 2.91634 2.91664C4.08301 2.91664 5.54134 2.21664 6.55634 1.32998C6.81165 1.11185 7.1877 1.11185 7.44301 1.32998C8.46384 2.22248 9.91634 2.91664 11.083 2.91664C11.4052 2.91664 11.6663 3.17781 11.6663 3.49998V7.58331" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M5.25 6.99998L6.41667 8.16665L8.75 5.83331" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     Enterprise Secure Login
                 </Badge>
-                <h1 className="text-[36px] font-bold text-[#1D1B18]">Welcome back</h1>
-                <Button onClick={toggleHandler}>SignUp</Button>
+
+                <h1 className="text-[28px] sm:text-[32px] lg:text-[36px] font-bold text-[#1D1B18]">
+                    Welcome back
+                </h1>
+
+                <p className="text-sm sm:text-base text-[#625D56]">
+                    Access your live operations command center, POS
+                    stations, and GCC kitchen pipeline.
+                </p>
+
+                <div className="w-full flex flex-col sm:flex-row items-center gap-3">
+                    <Button className="w-full !bg-[#FBF9F5] border border-[#E6DED3] font-semibold">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clipPath="url(#clip0_27_20)">
+                                <path d="M15.83 8.17999C15.83 7.71332 15.79 7.24665 15.7033 6.79999H8V9.80665H12.4C12.2067 10.82 11.64 11.6733 10.8 12.2467V14.28H13.3867C14.9 12.8867 15.8267 10.8333 15.8267 8.17999H15.83Z" fill="#4285F4"/>
+                                <path d="M8.00001 16C10.16 16 11.9667 15.28 13.2867 14.06L10.7 12.0266C9.98001 12.5066 9.06668 12.8 8.00001 12.8C5.92001 12.8 4.15335 11.4 3.52001 9.51331H0.84668V11.6133C2.16668 14.2066 4.87335 16 8.00001 16Z" fill="#34A853"/>
+                                <path d="M3.52 9.51332C3.35333 9.03332 3.26667 8.51999 3.26667 7.99999C3.26667 7.47999 3.35333 6.96666 3.52 6.48666V4.38666H0.846667C0.306667 5.47332 0 6.69999 0 7.99999C0 9.29999 0.306667 10.5267 0.846667 11.6133L3.52 9.51332Z" fill="#FBBC05"/>
+                                <path d="M8.00001 3.16667C9.18001 3.16667 10.2333 3.57333 11.0667 4.36667L13.3467 2.08667C11.9667 0.793333 10.16 0 8.00001 0C4.87335 0 2.16668 1.79333 0.84668 4.38667L3.52001 6.48667C4.15335 4.6 5.92001 3.16667 8.00001 3.16667Z" fill="#EA4335"/>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_27_20">
+                                    <rect width="16" height="16" fill="white"/>
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        Google SSO
+                    </Button>
+
+                    <Button className="w-full !bg-[#FBF9F5] border border-[#E6DED3] font-semibold">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.4732 13C11.9199 13.8267 11.3332 14.6333 10.4399 14.6467C9.54657 14.6667 9.2599 14.12 8.24657 14.12C7.22657 14.12 6.91323 14.6333 6.06657 14.6667C5.19323 14.7 4.53323 13.7867 3.97323 12.98C2.83323 11.3333 1.9599 8.3 3.13323 6.26C3.71323 5.24666 4.75323 4.60666 5.8799 4.58666C6.73323 4.57333 7.54657 5.16666 8.07323 5.16666C8.59323 5.16666 9.5799 4.45333 10.6132 4.56C11.0466 4.58 12.2599 4.73333 13.0399 5.88C12.9799 5.92 11.5932 6.73333 11.6066 8.42C11.6266 10.4333 13.3732 11.1067 13.3932 11.1133C13.3732 11.16 13.1132 12.0733 12.4732 13ZM10.6466 4.24C11.0732 3.72 11.3666 2.99333 11.2866 2.26666C10.6199 2.29333 9.8399 2.71333 9.39323 3.23333C9.00657 3.68 8.6599 4.41333 8.75323 5.12666C9.4999 5.18667 10.2199 4.76 10.6466 4.24Z" fill="#1D1B18"/>
+                        </svg>
+                        Apple ID
+                    </Button>
+                </div>
+
+                <div className="w-full flex items-center gap-3">
+                    <span className="flex w-full border-b border-[#E6DED3]"></span>
+                    <h2 className="text-[10px] sm:text-[12px] text-[#918A81] text-nowrap">OR SIGN IN WITH EMAIL</h2>
+                    <span className="flex w-full border-b border-[#E6DED3]"></span>
+                </div>
+
+                <div className="w-full flex flex-col gap-1.5">
+                    <label htmlFor="email" className="text-[12px] font-bold text-[#1D1B18]">WORK EMAIL ADDRESS</label>
+                    <div className="relative w-full">
+                        <svg className="absolute left-3.5 top-1/2 -translate-y-1/2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.6663 4.66669L8.67234 8.48469C8.25828 8.72518 7.74706 8.72518 7.33301 8.48469L1.33301 4.66669" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M2.66634 2.66669H13.333C14.0689 2.66669 14.6663 3.26413 14.6663 4.00002V12C14.6663 12.7359 14.0689 13.3334 13.333 13.3334H2.66634C1.93045 13.3334 1.33301 12.7359 1.33301 12V4.00002C1.33301 3.26413 1.93045 2.66669 2.66634 2.66669V2.66669" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <input type="email" id="email" className="w-full border border-[#D8CEC1] outline-0 rounded-xl pl-10 py-3 pr-4 text-[14px] text-[#1D1B18]"/>
+                    </div>
+                </div>
+
+                <div className="w-full flex flex-col gap-1.5">
+                    <label htmlFor="email" className="text-[12px] font-bold text-[#1D1B18]">PASSWORD</label>
+                    <div className="relative w-full">
+                        <svg className="absolute left-3.5 top-1/2 -translate-y-1/2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.33333 7.33331H12.6667C13.4026 7.33331 14 7.93076 14 8.66665V13.3333C14 14.0692 13.4026 14.6666 12.6667 14.6666H3.33333C2.59745 14.6666 2 14.0692 2 13.3333V8.66665C2 7.93076 2.59745 7.33331 3.33333 7.33331V7.33331" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M4.66699 7.33331V4.66665C4.66699 2.82693 6.16061 1.33331 8.00033 1.33331C9.84004 1.33331 11.3337 2.82693 11.3337 4.66665V7.33331" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <input type="email" id="email" className="w-full border border-[#D8CEC1] outline-0 rounded-xl pl-10 py-3 pr-4 text-[14px] text-[#1D1B18]"/>
+                    </div>
+                </div>
+
+                <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+                    <div className="flex items-center gap-2">
+                        <input type="checkbox" name="" id="Remember" />
+                        <label htmlFor="Remember" className="flex justify-between items-center gap-2 text-[12px] text-[#918A81]">
+                            Remember terminal session
+                        </label>
+                    </div>
+
+                    <span className="flex items-center gap-2 text-[12px] text-[#918A81]">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clipPath="url(#clip0_27_72)">
+                            <path d="M6.99997 5.83331C6.35607 5.83331 5.83331 6.35608 5.83331 6.99998C5.83331 7.59498 5.77497 8.46415 5.68164 9.33331" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M8.16634 7.65332C8.16634 9.04165 8.16634 11.375 7.58301 12.8333" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M10.0859 12.2617C10.1559 11.9117 10.3368 10.92 10.3776 10.5" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M1.16699 7.00003C1.16699 4.48919 2.77367 2.26004 5.15566 1.46604C7.53766 0.672045 10.1605 1.49135 11.667 3.50003" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M1.16699 9.33331H1.17283" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M12.7168 9.33331C12.8335 8.16665 12.7932 6.21015 12.7168 5.83331" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M2.91699 11.375C3.20866 10.5 3.50033 8.74998 3.50033 6.99998C3.49974 6.60265 3.56681 6.20813 3.69866 5.83331" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M5.0459 12.8334C5.1684 12.4484 5.3084 12.0634 5.3784 11.6667" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M5.25 3.96665C6.33325 3.34124 7.66792 3.34145 8.75097 3.96721C9.83402 4.59298 10.5008 5.74916 10.5 6.99999V8.16665" stroke="#D94A1F" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_27_72">
+                            <rect width="14" height="14" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        TouchID enabled
+                    </span>
+                </div>
+
+                <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
+                    <h2 className="flex items-center gap-2 text-[12px] text-[#918A81] flex-wrap">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.6663 5.83332C11.6663 8.74591 8.43526 11.7792 7.35026 12.7161C7.14261 12.8722 6.85674 12.8722 6.64909 12.7161C5.56409 11.7792 2.33301 8.74591 2.33301 5.83332C2.33301 3.25772 4.42407 1.16666 6.99967 1.16666C9.57528 1.16666 11.6663 3.25772 11.6663 5.83332" stroke="#918A81" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path d="M5.25 5.83334C5.25 6.79919 6.03415 7.58334 7 7.58334C7.96585 7.58334 8.75 6.79919 8.75 5.83334C8.75 4.86749 7.96585 4.08334 7 4.08334C6.03415 4.08334 5.25 4.86749 5.25 5.83334V5.83334" stroke="#918A81" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        Default Venue:
+                        <span className="font-bold text-[#1D1B18]">
+                            Dubai Marina (Flagship)
+                        </span>
+                    </h2>
+
+                    <Button className="!text-[#D94A1F] font-semibold" onClick={toggleHandler}>
+                        Need an account?
+                    </Button>
+                </div>
             </div>
         </section>
     )
