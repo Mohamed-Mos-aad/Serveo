@@ -72,15 +72,6 @@ export default function Trusted() {
                     ))}
                 </ul>
             </div>
-            <style jsx global>{`
-                @keyframes infinite-scroll {
-                    from { transform: translateX(0); }
-                    to { transform: translateX(-33.333%); }
-                }
-                .animate-infinite-scroll {
-                    animation: infinite-scroll 25s linear infinite;
-                }
-            `}</style>
         </section>
     )
 }
