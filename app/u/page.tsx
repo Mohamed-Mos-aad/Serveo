@@ -1,4 +1,5 @@
 'use client'
+export const dynamic = 'force-dynamic';
 // ** Sections
 import Login from "@/pages/auth/Login";
 import SignUp from "@/pages/auth/SignUp";
@@ -32,12 +33,18 @@ export default function Auth() {
   
 
   return (
-    <main className="min-h-screen grid grid-cols-2 items-center relative">
-      <Login toggleHandler={handleToggle}/>
-      <div className={`w-1/2 h-full bg-primary absolute top-0 ${isLogin ? 'left-1/2' : 'left-0'} duration-1000`}>
+    <main className="min-h-screen flex lg:grid grid-cols-2 items-center relative overflow-x-hidden lg:overflow-visible">
+      <div className={`w-[300%] shrink-0 min-h-screen flex duration-1000 lg:contents ${isLogin ? 'translate-x-0' : '-translate-x-2/3'}`}>
+        <div className="w-1/3 shrink-0 flex items-center lg:contents">
+          <Login toggleHandler={handleToggle}/>
+        </div>
+        <div className={`w-1/3 shrink-0 bg-primary lg:w-1/2 lg:h-full lg:absolute top-0 ${isLogin ? 'lg:left-1/2' : 'lg:left-0'} duration-1000`}>
 
+        </div>
+        <div className="w-1/3 shrink-0 flex items-center lg:contents">
+          <SignUp toggleHandler={handleToggle}/>
+        </div>
       </div>
-      <SignUp toggleHandler={handleToggle}/>
     </main>
   );
 }
