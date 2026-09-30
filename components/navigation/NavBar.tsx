@@ -60,7 +60,9 @@ export default function NavBar() {
                         <li className='cursor-pointer hover:text-primary duration-500'>Case Studies</li>
                     </ul>
                     <div className='flex flex-col gap-3 pt-4 border-t border-border-light'>
-                        <button className='bg-transparent w-full px-5 py-2.5 rounded-xl text-charcoal cursor-pointer border border-border-light'>Sign In</button>
+                        <Link href="/u">
+                            <button className='bg-transparent w-full px-5 py-2.5 rounded-xl text-charcoal cursor-pointer border border-border-light'>Sign In</button>
+                        </Link>
                         <button className='bg-primary w-full px-5 py-2.5 rounded-xl text-white cursor-pointer'>Book a Demo</button>
                     </div>
                 </div>

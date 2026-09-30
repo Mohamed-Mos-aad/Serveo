@@ -1,6 +1,7 @@
 // ** Components
 import Badge from "@/components/ui/Badge"
 import Button from "@/components/ui/Button"
+import Input from "@/components/ui/Input";
 // ** Props
 interface LoginProps{
     toggleHandler: ()=> void
@@ -10,7 +11,7 @@ interface LoginProps{
 
 export default function Login({toggleHandler} : LoginProps) {
     return (
-        <section className="min-h-screen flex items-center p-4 sm:p-6 lg:p-8">
+        <section className="min-h-screen flex items-center p-4 sm:p-6 lg:py-8 lg:px-22">
             <div className="w-full min-h-fit flex flex-col items-start gap-3 lg:bg-white rounded-4xl p-4 sm:p-6 lg:p-8">
                 <Badge>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,29 +61,8 @@ export default function Login({toggleHandler} : LoginProps) {
                     <h2 className="text-[10px] sm:text-[12px] text-[#918A81] text-nowrap">OR SIGN IN WITH EMAIL</h2>
                     <span className="flex w-full border-b border-[#E6DED3]"></span>
                 </div>
-
-                <div className="w-full flex flex-col gap-1.5">
-                    <label htmlFor="email" className="text-[12px] font-bold text-[#1D1B18]">WORK EMAIL ADDRESS</label>
-                    <div className="relative w-full">
-                        <svg className="absolute left-3.5 top-1/2 -translate-y-1/2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.6663 4.66669L8.67234 8.48469C8.25828 8.72518 7.74706 8.72518 7.33301 8.48469L1.33301 4.66669" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M2.66634 2.66669H13.333C14.0689 2.66669 14.6663 3.26413 14.6663 4.00002V12C14.6663 12.7359 14.0689 13.3334 13.333 13.3334H2.66634C1.93045 13.3334 1.33301 12.7359 1.33301 12V4.00002C1.33301 3.26413 1.93045 2.66669 2.66634 2.66669V2.66669" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <input type="email" id="email" className="w-full border border-[#D8CEC1] outline-0 rounded-xl pl-10 py-3 pr-4 text-[14px] text-[#1D1B18]"/>
-                    </div>
-                </div>
-
-                <div className="w-full flex flex-col gap-1.5">
-                    <label htmlFor="email" className="text-[12px] font-bold text-[#1D1B18]">PASSWORD</label>
-                    <div className="relative w-full">
-                        <svg className="absolute left-3.5 top-1/2 -translate-y-1/2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3.33333 7.33331H12.6667C13.4026 7.33331 14 7.93076 14 8.66665V13.3333C14 14.0692 13.4026 14.6666 12.6667 14.6666H3.33333C2.59745 14.6666 2 14.0692 2 13.3333V8.66665C2 7.93076 2.59745 7.33331 3.33333 7.33331V7.33331" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M4.66699 7.33331V4.66665C4.66699 2.82693 6.16061 1.33331 8.00033 1.33331C9.84004 1.33331 11.3337 2.82693 11.3337 4.66665V7.33331" stroke="#918A81" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <input type="email" id="email" className="w-full border border-[#D8CEC1] outline-0 rounded-xl pl-10 py-3 pr-4 text-[14px] text-[#1D1B18]"/>
-                    </div>
-                </div>
-
+                <Input label="WORK EMAIL ADDRESS" id="email" type="email"/>
+                <Input label="PASSWORD" id="password" type="password"/>
                 <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
                     <div className="flex items-center gap-2">
                         <input type="checkbox" name="" id="Remember" />
@@ -113,7 +93,13 @@ export default function Login({toggleHandler} : LoginProps) {
                         TouchID enabled
                     </span>
                 </div>
-
+                <Button variant="primary" className="w-full py-3.5">
+                    Sign In to Serveo Hub
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.33301 8H12.6663" stroke="white" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+                        <path d="M8 3.33334L12.6667 8.00001L8 12.6667" stroke="white" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                </Button>
                 <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
                     <h2 className="flex items-center gap-2 text-[12px] text-[#918A81] flex-wrap">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -30,7 +30,7 @@ export default function AuthContent() {
         <div className="w-1/3 shrink-0 flex items-center lg:contents">
           <Login toggleHandler={handleToggle} />
         </div>
-        <div className={`w-1/3 shrink-0 bg-primary lg:w-1/2 lg:h-full lg:absolute top-0 ${isLogin ? 'lg:left-1/2' : 'lg:left-0'} duration-1000`} />
+        <div className={`w-1/3 shrink-0 bg-primary lg:w-1/2 lg:h-full lg:absolute lg:z-10000000000 top-0 ${isLogin ? 'lg:left-1/2' : 'lg:left-0'} duration-1000`} />
         <div className="w-1/3 shrink-0 flex items-center lg:contents">
           <SignUp toggleHandler={handleToggle} />
         </div>
