@@ -8,10 +8,14 @@ import { useState } from "react";
 
 
 
-export default function AuthContent() {
+type AuthContentProps = {
+  initialMode: "login" | "signup";
+};
+
+export default function AuthContent({ initialMode }: AuthContentProps) {
   // ** Constants
   const router = useRouter();
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(initialMode === "login");
 
 
 
