@@ -4,12 +4,13 @@ import Button from "@/components/ui/Button"
 import Input from "@/components/ui/Input";
 // ** Props
 interface LoginProps{
-    toggleHandler: ()=> void
+    toggleHandler: ()=> void;
+    resetPasswordHandler: ()=> void;
 }
 
 
 
-export default function Login({toggleHandler} : LoginProps) {
+export default function Login({toggleHandler, resetPasswordHandler} : LoginProps) {
     return (
         <section className="min-h-screen flex items-center p-4 sm:p-6 lg:py-8 lg:px-22">
             <div className="w-full min-h-fit flex flex-col items-start gap-3 lg:bg-white rounded-4xl p-4 sm:p-6 lg:p-8">
@@ -62,7 +63,12 @@ export default function Login({toggleHandler} : LoginProps) {
                     <span className="flex w-full border-b border-[#E6DED3]"></span>
                 </div>
                 <Input label="WORK EMAIL ADDRESS" id="email" type="email"/>
-                <Input label="PASSWORD" id="password" type="password"/>
+                <div className="w-full relative">
+                    <button className="text-[12px] font-bold text-[#D94A1F] absolute top-0 right-0 cursor-pointer" onClick={resetPasswordHandler}>
+                        Forgot password?
+                    </button>
+                    <Input label="PASSWORD" id="password" type="password"/>
+                </div>
                 <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
                     <div className="flex items-center gap-2">
                         <input type="checkbox" name="" id="Remember" />
