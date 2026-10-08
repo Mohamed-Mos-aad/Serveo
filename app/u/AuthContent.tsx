@@ -10,6 +10,7 @@ import logo from '@/public/favicon.svg'
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import ResetPasswordTips from "@/pages/auth/ResetPasswordTips";
 // ** Interfaces
 type AuthContentProps = {
   initialMode: "login" | "signup" | "resetPassword";
@@ -55,11 +56,16 @@ export default function AuthContent({ initialMode }: AuthContentProps) {
                           <LoginTips handleToggle={handleToggle}/>
                       </section>
                       :
-                      <section className={`w-1/3 shrink-0 bg-primary lg:w-1/2 lg:h-full lg:absolute lg:z-10000000000 top-0 ${isLogin ? 'lg:left-1/2' : 'lg:left-0'} duration-1000`} >
+                      initialMode === "resetPassword" ?
+                          <section className={`w-1/3 shrink-0 bg-primary lg:w-1/2 lg:h-full lg:absolute lg:z-10000000000 top-0 ${isLogin ? 'lg:left-1/2' : 'lg:left-0'} duration-1000`} >
+                              <ResetPasswordTips handleToggle={handleToggle}/>
+                          </section>
+                      :
+                        <section className={`w-1/3 shrink-0 bg-primary lg:w-1/2 lg:h-full lg:absolute lg:z-10000000000 top-0 ${isLogin ? 'lg:left-1/2' : 'lg:left-0'} duration-1000`} >
                           <div className="h-full flex justify-center items-center p-4 sm:p-6 lg:py-8 lg:px-16">
 
                           </div>
-                      </section>
+                        </section>
               }
           </div>
         <div className="w-1/3 shrink-0 flex items-center lg:contents">
