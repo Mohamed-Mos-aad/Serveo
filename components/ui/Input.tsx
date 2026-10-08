@@ -7,6 +7,7 @@ type InputProps = {
     placeholder?: string;
     value?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    variant?: 'primary' | 'secondary';
 };
 
 export default function Input({
@@ -14,13 +15,19 @@ export default function Input({
                                   id,
                                   type = "text",
                                   placeholder,
+                                  variant = 'primary',
                                   value,
                                   onChange,
                               }: InputProps) {
+// ** Constants
     const [showPassword, setShowPassword] = useState(false);
-
     const isPassword = type === "password";
     const inputType = isPassword && showPassword ? "text" : type;
+    const variantStyles = variant === 'primary'
+        ? 'bg-white text-charcoal border border-[#D8CEC1]'
+        : 'bg-[#FBF9F5] text-[#918A81]] border border-[#E6DED3]';
+
+
 
     return (
         <div className="w-full flex flex-col gap-1.5">
@@ -83,7 +90,7 @@ export default function Input({
                     placeholder={placeholder}
                     value={value}
                     onChange={onChange}
-                    className="w-full border border-[#D8CEC1] outline-0 rounded-xl pl-10 py-3 pr-10 text-[14px] text-[#1D1B18]"
+                    className={`${variantStyles} w-full border border-[#D8CEC1] outline-0 rounded-xl pl-10 py-3 pr-10 text-[14px] text-[#1D1B18]`}
                 />
 
                 {isPassword && (
