@@ -9,21 +9,17 @@ import Select from "@/components/ui/Select";
 // ** Props
 interface ResetPasswordProps {
     toggleHandler: () => void;
+    handleVerifyOtpToggle: () => void;
 }
 
-
-
-export default function ResetPassword({toggleHandler}: ResetPasswordProps) {
+export default function ResetPassword({toggleHandler, handleVerifyOtpToggle}: ResetPasswordProps) {
     // Constants
-    const [byEmail,setByEmail] = useState<boolean>(true);
-
-
+    const [byEmail, setByEmail] = useState<boolean>(true);
 
     // ** Handlers
-    const handleToggle = ()=>{
+    const handleToggle = () => {
         setByEmail(prev => !prev)
     }
-
 
     return (
         <section className="min-h-screen flex items-center p-4 sm:p-6 lg:py-8 lg:px-22">
@@ -47,25 +43,46 @@ export default function ResetPassword({toggleHandler}: ResetPasswordProps) {
                 </p>
 
                 <div className="w-full flex flex-col sm:flex-row items-center bg-[#EFEAE1] p-1 rounded-lg my-3 relative">
-                    <div className={`flex w-1/2 h-full p-1 absolute duration-150 ${byEmail ? "left-0" : "left-[calc(50%-1px)]"} top-0`}>
-                        <div className="flex w-full bg-white rounded-lg"></div>
+                    <div
+                        className={`
+                            flex absolute duration-200 ease-in-out p-1
+                            /* Mobile: Vertical movement */
+                            w-[calc(100%-8px)] h-[calc(50%-4px)] left-1
+                            ${byEmail ? "top-1" : "top-[calc(50%)]"}
+                            /* Desktop (sm+): Horizontal movement */
+                            sm:w-[calc(50%-4px)] sm:h-[calc(100%-8px)] sm:top-1
+                            ${byEmail ? "sm:left-1" : "sm:left-[calc(50%)]"}
+                        `}
+                    >
+                        <div className="flex w-full h-full bg-white rounded-lg shadow-sm"></div>
                     </div>
-                    <Button className="w-full !rounded-lg z-10" onClick={handleToggle}>
+
+                    <Button className="w-full !rounded-lg z-10 bg-transparent hover:bg-transparent shadow-none text-black" onClick={handleToggle}>
                         Work Email
                     </Button>
-                    <Button className="w-full  !rounded-lg z-10" onClick={handleToggle}>
+                    <Button className="w-full !rounded-lg z-10 bg-transparent hover:bg-transparent shadow-none text-black" onClick={handleToggle}>
                         GCC Mobile
                     </Button>
                 </div>
+
                 {
                     byEmail ?
                         <Input variant="secondary" label="REGISTERED WORK EMAIL" id="email" type="email" placeholder="gm.venue@atlantisdining.ae"/>
-                    :
-                        <Input variant="secondary" label="REGISTERED GCC Mobile" id="GCC" type="text"  placeholder="05X XXX XXXX"/>
+                        :
+                        <Input variant="secondary" label="REGISTERED GCC Mobile" id="GCC" type="text" placeholder="05X XXX XXXX"/>
                 }
+
                 <p className="text-[11px] text-[#918A81]">Must match your authorized staff or venue administrator profile.</p>
+
                 <Select variant="secondary" id="test" options={[{label: "Need POS Terminal Operator PIN reset?", value: "POS"}]}/>
+                <Button variant="primary" className="w-full mt-2" onClick={handleVerifyOtpToggle}>
+                    Send Recovery Instructions
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.13125 6.75H0V5.25H9.13125L4.93125 1.05L6 0L12 6L6 12L4.93125 10.95L9.13125 6.75Z" fill="white"/>
+                    </svg>
+                </Button>
                 <div className="flex w-full border-t border-t-[#E6DED3]/60 mt-5"></div>
+
                 <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
                     <Button className="!text-[#D94A1F] text-[12px] font-semibold" onClick={toggleHandler}>
                         <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">

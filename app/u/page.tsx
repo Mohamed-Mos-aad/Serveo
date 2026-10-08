@@ -8,7 +8,14 @@ type AuthPageProps = {
 
 export default async function AuthPage({ searchParams }: AuthPageProps) {
   const { mode } = await searchParams;
-  const initialMode = mode === "signup" ? "signup" : mode === "resetPassword" ? "resetPassword" : "login";
+  const initialMode =
+    mode === "signup"
+      ? "signup"
+      : mode === "resetPassword"
+        ? "resetPassword"
+        : mode === "verifyOtp"
+          ? "verifyOtp"
+          : "login";
 
   return <AuthContent initialMode={initialMode} />;
 }

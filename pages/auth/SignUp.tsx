@@ -9,7 +9,7 @@ interface SignUpProps {
 
 export default function SignUp({ toggleHandler }: SignUpProps) {
     return (
-        <section className="min-h-screen flex items-center p-4 sm:p-6 lg:py-8 lg:px-22">
+        <section className="min-h-screen flex items-center p-4 sm:p-6 lg:col-start-2 lg:py-8 lg:px-22">
             <div className="w-full min-h-fit flex flex-col items-start gap-3 lg:bg-white rounded-4xl p-4 sm:p-6 lg:p-8">
 
                 <Badge>

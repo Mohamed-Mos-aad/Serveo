@@ -62,12 +62,12 @@ export default function Login({toggleHandler, resetPasswordHandler} : LoginProps
                     <h2 className="text-[10px] sm:text-[12px] text-[#918A81] text-nowrap">OR SIGN IN WITH EMAIL</h2>
                     <span className="flex w-full border-b border-[#E6DED3]"></span>
                 </div>
-                <Input label="WORK EMAIL ADDRESS" id="email" type="email"/>
+                <Input variant="secondary" label="WORK EMAIL ADDRESS" id="email" type="email"/>
                 <div className="w-full relative">
                     <button className="text-[12px] font-bold text-[#D94A1F] absolute top-0 right-0 cursor-pointer" onClick={resetPasswordHandler}>
                         Forgot password?
                     </button>
-                    <Input label="PASSWORD" id="password" type="password"/>
+                    <Input variant="secondary" label="PASSWORD" id="password" type="password"/>
                 </div>
                 <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
                     <div className="flex items-center gap-2">
