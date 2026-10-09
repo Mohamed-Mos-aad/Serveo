@@ -78,7 +78,9 @@ export default function AuthContent({ initialMode }: AuthContentProps) {
   const handlePasswordChangedToggle = () => {
     transitionTo("passwordChanged");
   };
-
+    const handleLogin = ()=>{
+        router.replace("/menus");
+    }
 
 
   return (
@@ -86,7 +88,7 @@ export default function AuthContent({ initialMode }: AuthContentProps) {
       <div className={`w-[300%] shrink-0 min-h-screen flex transition-transform duration-700 lg:contents ${panelOnLoginSide ? 'translate-x-0' : '-translate-x-2/3'}`}>
         <div className="w-1/3 shrink-0 flex items-center lg:contents">
             { mode === "verifyOtp" &&  <VerifyOtp verifyHandler={handlePasswordChangedToggle} authenticatorHandler={handleToggle} resendHandler={handleToggle} managerOverrideHandler={handleToggle} whatsappHandler={handleToggle}/>}
-            { (mode === "login" || mode === "signup" || mode === "resetPassword")  &&  <Login toggleHandler={handleToggle} resetPasswordHandler={handleResetPasswordToggle}/>}
+            { (mode === "login" || mode === "signup" || mode === "resetPassword")  &&  <Login toggleHandler={handleToggle} resetPasswordHandler={handleResetPasswordToggle} handleLogin={handleLogin}/>}
         </div>
           <section className={`w-1/3 lg:hidden shrink-0 bg-primary lg:w-1/2 lg:h-full lg:absolute lg:z-10000000000 top-0 ${panelOnLoginSide ? 'lg:left-1/2' : 'lg:left-0'} transition-all duration-700`} >
               <div className="h-full flex justify-center items-center p-4 sm:p-6 lg:py-8 lg:px-16">

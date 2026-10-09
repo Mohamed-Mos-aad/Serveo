@@ -6,11 +6,12 @@ import Input from "@/components/ui/Input";
 interface LoginProps{
     toggleHandler: ()=> void;
     resetPasswordHandler: ()=> void;
+    handleLogin: ()=> void;
 }
 
 
 
-export default function Login({toggleHandler, resetPasswordHandler} : LoginProps) {
+export default function Login({toggleHandler, resetPasswordHandler, handleLogin} : LoginProps) {
     return (
         <section className="min-h-screen flex items-center p-4 sm:p-6 lg:py-8 lg:px-22">
             <div className="w-full min-h-fit flex flex-col items-start gap-3 lg:bg-white rounded-4xl p-4 sm:p-6 lg:p-8">
@@ -99,7 +100,7 @@ export default function Login({toggleHandler, resetPasswordHandler} : LoginProps
                         TouchID enabled
                     </span>
                 </div>
-                <Button variant="primary" className="w-full py-3.5">
+                <Button variant="primary" className="w-full py-3.5" onClick={handleLogin}>
                     Sign In to Serveo Hub
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.33301 8H12.6663" stroke="white" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
