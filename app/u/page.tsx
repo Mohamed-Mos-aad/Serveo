@@ -15,7 +15,11 @@ export default async function AuthPage({ searchParams }: AuthPageProps) {
         ? "resetPassword"
         : mode === "verifyOtp"
           ? "verifyOtp"
-          : "login";
+          : mode === "passwordChanged"
+            ? "passwordChanged"
+            : "login";
+
+
 
   return <AuthContent initialMode={initialMode} />;
 }
