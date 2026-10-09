@@ -79,7 +79,7 @@ export default function AuthContent({ initialMode }: AuthContentProps) {
     transitionTo("passwordChanged");
   };
     const handleLogin = ()=>{
-        router.replace("/menus");
+        router.replace("/home/menus");
     }
 
 
