@@ -22,7 +22,9 @@ export default function HomeNavBar() {
                 <Image src={logo} alt='logo' className='w-fit h-10 lg:h-13'/>
 
                 <ul className='hidden lg:flex gap-8 text-muted'>
-                    <li className='cursor-pointer hover:text-primary duration-500'>Home</li>
+                    <li className='cursor-pointer hover:text-primary duration-500'>
+                        <Link href="/home">Home</Link>
+                    </li>
                     <li className='cursor-pointer hover:text-primary duration-500'>Menu</li>
                     <li className='cursor-pointer hover:text-primary duration-500'>Categories</li>
                     <li className='cursor-pointer hover:text-primary duration-500'>About</li>
@@ -58,7 +60,9 @@ export default function HomeNavBar() {
             {isOpen && (
                 <div className='lg:hidden absolute z-100000000 top-full left-0 w-full bg-white border-b border-border-light px-6 py-6 flex flex-col gap-6 shadow-lg animate-in fade-in slide-in-from-top-2 duration-300'>
                     <ul className='flex flex-col gap-4 text-muted'>
-                        <li className='cursor-pointer hover:text-primary duration-500'>Home</li>
+                        <li className='cursor-pointer hover:text-primary duration-500'>
+                            <Link href="/home">Home</Link>
+                        </li>
                         <li className='cursor-pointer hover:text-primary duration-500'>Menu</li>
                         <li className='cursor-pointer hover:text-primary duration-500'>Categories</li>
                         <li className='cursor-pointer hover:text-primary duration-500'>About</li>
