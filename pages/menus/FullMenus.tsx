@@ -6,6 +6,8 @@ import Image from "next/image";
 import testImage from "@/public/images/test/Cheesy Beef Burger.png";
 import MenuCard from "@/components/menus/MenuCard";
 import Header from "@/components/menus/Header";
+import Button from "@/components/ui/Button";
+import Filters from "@/components/menus/Filters";
 // ** Constants
 const products = [
     {
@@ -153,10 +155,7 @@ export default function FullMenus() {
         <main className="flex min-h-screen w-full flex-col gap-6 p-4 sm:gap-8 sm:p-6 lg:p-8">
             <Header length={products.length.toString()}/>
             <div className="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-[minmax(200px,25%)_minmax(0,75%)]">
-                <section className="hidden lg:block">
-                    side
-                </section>
-
+                <Filters />
                 <section className="min-w-0">
                     <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#E7E5E4] pb-3">
                         <h2 className="text-xs font-bold sm:text-sm">
