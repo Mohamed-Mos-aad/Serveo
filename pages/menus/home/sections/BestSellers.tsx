@@ -56,7 +56,7 @@ export default function BestSellers() {
                     <Link href="/home/menus" className="border border-[#D6D3D1] rounded-full px-4 py-1.5 text-[12px] text-[#27272A] cursor-pointer">See All</Link>
                 </div>
             </div>
-            <div className="grid grid-cols-1 gap-4 py-5 min-[420px]:grid-cols-2 md:gap-5 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 py-5 min-[420px]:grid-cols-2 md:gap-5 2xl:grid-cols-4">
                 {products.map((product) => (
                     <MenuCard name={product.name} productImg={{src: testImage, alt: product.name}} badge={product.badge} rating={product.rating} description={product.description} price={product.price} reviews={product.rating} time={product.time} key={product.name+product.description}/>
                 ))}
