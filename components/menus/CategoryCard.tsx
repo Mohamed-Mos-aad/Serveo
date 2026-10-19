@@ -15,7 +15,7 @@ interface CategoryCardProps{
 export default function CategoryCard({name, productImg, itemsNumber}:CategoryCardProps) {
     return (
         <div className="w-full flex flex-col gap-4 items-center border border-[#E7E5E4]/70 rounded-2xl p-4">
-            <div className="w-16 h-16 rounded-full bg-[#FAFAF9]">
+            <div className="w-16 h-16 rounded-full bg-[#FAFAF9] overflow-hidden">
                 <Image src={productImg.src} alt={productImg.alt}/>
             </div>
             <h2 className="text-[14px] font-bold text-[#292524]">{name}</h2>
