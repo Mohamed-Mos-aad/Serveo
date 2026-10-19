@@ -3,6 +3,7 @@ import HomeHero from "@/pages/menus/home/sections/HomeHero";
 import HomeCategories from "@/pages/menus/home/sections/HomeCategories";
 import BestSellers from "@/pages/menus/home/sections/BestSellers";
 import NewArrivals from "@/pages/menus/home/sections/NewArrivals";
+import SpecialOffer from "@/pages/menus/home/sections/SpecialOffer";
 
 
 
@@ -13,6 +14,7 @@ export default function Home() {
             <HomeCategories />
             <BestSellers />
             <NewArrivals />
+            <SpecialOffer />
         </main>
     );
 }
