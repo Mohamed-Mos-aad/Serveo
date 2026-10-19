@@ -1,12 +1,7 @@
-// ** Components
-import SearchInput from "@/components/ui/SearchInput";
-// ** Hooks && Tools
-import Image from "next/image";
 // ** Assets
 import testImage from "@/public/images/test/Cheesy Beef Burger.png";
 import MenuCard from "@/components/menus/MenuCard";
 import Header from "@/components/menus/Header";
-import Button from "@/components/ui/Button";
 import Filters from "@/components/menus/Filters";
 // ** Constants
 const products = [
